@@ -25,7 +25,13 @@ listatarefas/ <br />
 │       └── index.html <br />
 ├── src/ <br />
 │   ├── components/ <br />
-│   │   └── Main.css <br />
+│   │   ├── Form/ <br />
+│   │   │   ├── Form.css <br />
+│   │   │   └── index.js <br />
+│   │   ├── Tarefas/ <br />
+│   │   │   ├── Tarefas.css <br />
+│   │   │   └── index.js <br />
+│   │   ├── Main.css <br />
 │   │   └── Main.js <br />
 │   ├── App.css <br />
 │   ├── App.js <br />
@@ -59,15 +65,12 @@ A aplicação será aberta automaticamente no navegador em http://localhost:3000
 
 ## 📌 Próximos Passos (To-Do)
 
-- [ ] Salvar tarefas no localStorage
+- [x] Salvar tarefas no localStorage
+- [ ] Marcar tarefas como concluídas
 - [ ] Filtros de tarefas (todas / concluídas / pendentes)
 - [ ] Tema claro/escuro
 - [ ] Backend com Node.js e MongoDB (opcional)
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Sinta-se à vontade para usar e modificar.
-
 ## 🙋‍♂️ Autor
 
-**Desenvolvido por João Luchetta – https://www.linkedin.com/in/joaoluchetta/**
+**Desenvolvido por João Luchetta – https://www.linkedin.com/in/joao-pedro-luchetta-dev/**
