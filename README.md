@@ -20,15 +20,15 @@ Este projeto é uma aplicação web de lista de tarefas (To-Do List) construída
 
 ## 📂 Estrutura do Projeto
 
-listatarefas/
-├── public/
-├── src/
-│   ├── components/
-│   │   └── TaskItem.jsx
-│   ├── App.jsx
-│   ├── index.js
-├── package.json
-└── README.md
+listatarefas/ <br />
+├── public/ <br />
+├── src/ <br />
+│   ├── components/ <br />
+│   │   └── TaskItem.jsx <br />
+│   ├── App.jsx <br />
+│   ├── index.js <br />
+├── package.json <br />
+└── README.md 
 
 ## ▶️ Como Executar o Projeto
 
