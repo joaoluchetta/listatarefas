@@ -22,11 +22,18 @@ Este projeto é uma aplicação web de lista de tarefas (To-Do List) construída
 
 listatarefas/ <br />
 ├── public/ <br />
+│       └── index.html <br />
 ├── src/ <br />
 │   ├── components/ <br />
-│   │   └── TaskItem.jsx <br />
-│   ├── App.jsx <br />
+│   │   └── Main.css <br />
+│   │   └── Main.js <br />
+│   ├── App.css <br />
+│   ├── App.js <br />
 │   ├── index.js <br />
+├── .editorconfig <br />
+├── .gitgnore <br />
+├── eslint.config.mjs <br />
+├── package-lock.json <br />
 ├── package.json <br />
 └── README.md 
 
