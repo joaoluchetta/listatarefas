@@ -1,13 +1,8 @@
 import { Component } from "react";
 
-// Form
-import { FaPlus } from 'react-icons/fa'
-
-// Tarefas
-import { FaEdit, FaWindowClose } from 'react-icons/fa'
-
-
-import './Main.css'
+import Form from './Form';
+import Tarefas from './Tarefas';
+import './Main.css';
 
 class Main extends Component {
   state = {
@@ -16,20 +11,20 @@ class Main extends Component {
     index: -1
   };
 
-  componentDidMount(){
+  componentDidMount() {
     const tarefas = JSON.parse(localStorage.getItem('tarefas'));
 
-    if(!tarefas) return;
+    if (!tarefas) return;
 
     this.setState({ tarefas });
   }
 
   componentDidUpdate(prevProps, prevState) {
-     const { tarefas } = this.state;
+    const { tarefas } = this.state;
 
-     if(tarefas === prevState.tarefas) return;
+    if (tarefas === prevState.tarefas) return;
 
-     localStorage.setItem('tarefas', JSON.stringify(tarefas));
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
   }
 
   handleSubmit = (event) => {
@@ -89,35 +84,18 @@ class Main extends Component {
       <div className="main">
         <h1>Lista de Tarefas</h1>
 
-        <form onSubmit={this.handleSubmit} action='#' className="form">
-          <input
-            onChange={this.handleChange}
-            type="text"
-            value={novaTarefa}
-          />
-          <button type="submit">
-            <FaPlus />
-          </button>
-        </form>
+        <Form
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+          novatarefa={this.novatarefa}
+        />
 
-        <ul className="tarefas">
-          {tarefas.map((tarefa, index) => (
-            <li key={tarefa}>
-              {tarefa}
-              <span>
-                <FaEdit
-                  onClick={(event) => this.handleEdit(event, index)}
-                  className="edit"
-                />
+        <Tarefas
+          tarefas={tarefas}
+          handleEdit={this.handleEdit}
+          handleDelete={this.handleDelete}
+        />
 
-                <FaWindowClose
-                  onClick={(event) => this.handleDelete(event, index)}
-                  className="delete"
-                />
-              </span>
-            </li>
-          ))}
-        </ul>
       </div>
     );
   }
